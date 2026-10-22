@@ -88,9 +88,9 @@ a{color:inherit}
 .corner.bl,.corner.br{bottom:22px;font-family:var(--sans);font-size:13px;letter-spacing:.3em;font-weight:400}
 .corner.bl{left:24px}.corner.br{right:24px}
 
-.center{position:absolute;left:0;right:0;top:52%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 22px;z-index:2}
+.center{position:absolute;left:0;right:0;bottom:62px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 22px;z-index:2}
 .reserved{font-size:12px;letter-spacing:.42em;font-weight:500;text-transform:uppercase;opacity:0;animation:rise 1s ease 1.1s forwards}
-.gname{font-family:var(--serif);font-size:clamp(30px,9vw,46px);line-height:1.08;margin:14px 0 26px;letter-spacing:.02em;
+.gname{font-family:var(--serif);font-size:clamp(26px,8.4vw,46px);line-height:1.08;margin:12px 0 22px;letter-spacing:.02em;
   text-transform:uppercase;text-shadow:0 2px 30px rgba(0,0,0,.45);opacity:0;animation:rise 1.2s ease 1.35s forwards}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
@@ -113,7 +113,7 @@ a{color:inherit}
 .keyhole svg{width:38%;height:auto}
 .seal.turn .keyhole{transform:rotate(-90deg)}
 .seal.turn .ring{transform:rotate(200deg)}
-.hint{margin-top:26px;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:rgba(244,234,216,.75);opacity:0;animation:rise 1s ease 2.2s forwards}
+.hint{margin-top:22px;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:rgba(244,234,216,.75);opacity:0;animation:rise 1s ease 2.2s forwards}
 .flash{position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;transform:translate(-50%,-50%);
   background:radial-gradient(circle,#fff4dc,rgba(255,190,100,.6) 40%,transparent 70%);opacity:0;z-index:3;pointer-events:none}
 #gate.opening .flash{animation:flash 1.3s ease .55s forwards}
@@ -175,6 +175,10 @@ footer{display:flex;align-items:center;gap:14px;margin-top:8px}
 footer img{width:38px;height:38px}
 footer .t{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);line-height:1.6}
 
+@media (max-height:700px),(max-width:360px){
+  .seal{width:84px;height:84px}.seal::before,.seal::after{inset:-11px}
+  .gname{margin:10px 0 18px}.hint{margin-top:18px}.center{bottom:56px}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
   
